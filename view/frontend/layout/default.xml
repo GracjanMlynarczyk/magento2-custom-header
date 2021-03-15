@@ -1,0 +1,11 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Ghratzoo_CustomHeader::css/main.css" />
+    </head>
+    <body>
+        <referenceBlock name="header.container">
+            <block class="Ghratzoo\CustomHeader\Block\CustomHeader" name="ghratzoo_header"
+                as="ghratzoo_header" template="Ghratzoo_CustomHeader::html/ghratzooheader.phtml" before="-"/>
+        </referenceBlock>
+    </body>
+</page>
