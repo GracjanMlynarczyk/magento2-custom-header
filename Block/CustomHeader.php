@@ -37,7 +37,7 @@ class CustomHeader extends Template
      */
     public function getPhoneNumber(): string
     {
-        return "123123123";
+        return "+48 123123123";
     }
 
     /**

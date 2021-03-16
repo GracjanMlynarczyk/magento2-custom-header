@@ -1,3 +1,42 @@
 .container {
     background-color: #6e716e;
 }
+
+#header-left {
+    float: left;
+}
+
+#header-right {
+    float: right;
+}
+
+ul#additional-info {
+    list-style: none;
+    padding: 0px;
+}
+
+ul#additional-info li {
+    display: inline-block;
+}
+
+ul#additional-info li:before {
+    content: '\2713';
+    margin: 0 1em;
+}
+
+#phone-number {
+    margin: 1em;
+}
+
+#phone-number:before {
+    content: '\260E';
+    margin: 1em;
+}
+
+.support-menu {
+    margin: 1em;
+}
+
+.customer-welcome {
+    cursor: pointer;
+}

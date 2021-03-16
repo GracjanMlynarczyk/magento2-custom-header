@@ -4,9 +4,33 @@ use Ghratzoo\CustomHeader\Block\CustomHeader;
 
 /** @var CustomHeader $block */
 ?>
-
 <div class="container">
-    <?php print_r($block->getAdditionalInfo()) ?>
-    <?php print_r($block->getSupportOptions()) ?>
-    <?php print_r($block->getPhoneNumber()) ?>
+    <div id="header-left">
+        <ul id="additional-info">
+            <?php foreach ($block->getAdditionalInfo() as $additionalInfo): ?>
+            <li><?= $additionalInfo ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+    <div id="header-right">
+        <span id="phone-number"><?php print_r($block->getPhoneNumber()) ?></span>
+        <span class="support-menu">&#9432;</span><div class="customer-welcome">
+            <div
+                data-mage-init='{"dropdown":{}}'
+                data-toggle="dropdown"
+                class="action action toggle switcher-trigger"
+                data-action="customer-menu-toggle">
+                <span><?= $block->escapeHtml(__('Support')) ?></span>
+            </div>
+            <ul data-target="dropdown" class="dropdown-options">
+                <?php foreach ($block->getSupportOptions() as $supportOption): ?>
+                    <li><span class="item"><a href="#"><?= __($supportOption) ?></a></span></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+    <div style="clear: both"></div>
 </div>
+
+
+
