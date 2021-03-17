@@ -39,17 +39,4 @@ class CustomHeader extends Template
     {
         return "+48 123123123";
     }
-
-    /**
-     * @return array
-     */
-    public function getSupportOptions(): array
-    {
-        return [
-            'CONTACT',
-            'DELIVERY & SHIPPING',
-            'PAYMENT METHODS',
-            'RETURNS & GUARANTEE'
-        ];
-    }
 }
