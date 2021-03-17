@@ -23,9 +23,7 @@ use Ghratzoo\CustomHeader\Block\CustomHeader;
                 <span><?= $block->escapeHtml(__('Support')) ?></span>
             </div>
             <ul data-target="dropdown" class="dropdown-options">
-                <?php foreach ($block->getSupportOptions() as $supportOption): ?>
-                    <li><span class="item"><a href="#"><?= __($supportOption) ?></a></span></li>
-                <?php endforeach; ?>
+                <?php echo $block->getChildChildHtml('ghratzoo_header.links') ?>
             </ul>
         </div>
     </div>

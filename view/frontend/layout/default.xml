@@ -5,7 +5,13 @@
     <body>
         <referenceBlock name="header.panel">
             <block class="Ghratzoo\CustomHeader\Block\CustomHeader" name="ghratzoo_header"
-                as="ghratzoo_header" template="Ghratzoo_CustomHeader::html/ghratzooheader.phtml" before="-"/>
+                   as="ghratzoo_header" template="Ghratzoo_CustomHeader::html/ghratzooheader.phtml" before="-">
+                <block name="ghratzoo_header.links" class="Magento\Framework\View\Element\Html\Links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">items order-links</argument>
+                    </arguments>
+                </block>
+            </block>
         </referenceBlock>
     </body>
 </page>
