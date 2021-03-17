@@ -13,5 +13,7 @@
                 </block>
             </block>
         </referenceBlock>
+        <move element="currency" destination="ghratzoo_header" />
+        <move element="store_language" destination="ghratzoo_header" />
     </body>
 </page>

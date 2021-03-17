@@ -26,6 +26,8 @@ use Ghratzoo\CustomHeader\Block\CustomHeader;
                 <?php echo $block->getChildChildHtml('ghratzoo_header.links') ?>
             </ul>
         </div>
+        <?php echo $this->getChildHtml('currency') ?>
+        <?php echo $this->getChildHtml('store_language') ?>
     </div>
     <div style="clear: both"></div>
 </div>
