@@ -20,23 +20,4 @@ class CustomHeader extends Template
     {
         parent::__construct($context, $data);
     }
-
-    /**
-     * @return string[]
-     */
-    public function getAdditionalInfo(): array
-    {
-        return [
-            'FREE DELIVERY',
-            'OVERNIGHT DELIVERY'
-        ];
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoneNumber(): string
-    {
-        return "+48 123123123";
-    }
 }

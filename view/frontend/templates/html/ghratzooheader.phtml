@@ -3,17 +3,20 @@
 use Ghratzoo\CustomHeader\Block\CustomHeader;
 
 /** @var CustomHeader $block */
+
+$additionalInfo = $block->getData('additional');
+$phoneNumber = $block->getData('phoneNumber');
 ?>
 <div class="container">
     <div id="header-left">
         <ul id="additional-info">
-            <?php foreach ($block->getAdditionalInfo() as $additionalInfo): ?>
-            <li><?= $additionalInfo ?></li>
+            <?php foreach ($additionalInfo as $key => $value): ?>
+            <li><?= $value ?></li>
             <?php endforeach; ?>
         </ul>
     </div>
     <div id="header-right">
-        <span id="phone-number"><?php print_r($block->getPhoneNumber()) ?></span>
+        <span id="phone-number"><?= $phoneNumber ?></span>
         <span class="support-menu">&#9432;</span><div class="customer-welcome">
             <div
                 data-mage-init='{"dropdown":{}}'

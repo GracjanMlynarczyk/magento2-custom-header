@@ -6,6 +6,13 @@
         <referenceBlock name="header.panel">
             <block class="Ghratzoo\CustomHeader\Block\CustomHeader" name="ghratzoo_header"
                    as="ghratzoo_header" template="Ghratzoo_CustomHeader::html/ghratzooheader.phtml" before="-">
+                <arguments>
+                    <argument name="additional" xsi:type="array">
+                        <item xsi:type="string" translate="true" name="first">FREE DELIVERY</item>
+                        <item xsi:type="string" translate="true" name="second">OVERNIGHT DELIVERY</item>
+                    </argument>
+                    <argument name="phoneNumber" xsi:type="string">+48 123123123</argument>
+                </arguments>
                 <block name="ghratzoo_header.links" class="Magento\Framework\View\Element\Html\Links">
                     <arguments>
                         <argument name="css_class" xsi:type="string">items order-links</argument>
